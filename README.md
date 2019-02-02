@@ -1,15 +1,10 @@
 redhawk-yum
 ===============
-This project assembles a yum repository server hosting REDHAWK release artifacts as a 
-docker-compose microservice.
+This project creates a local yum repository server hosting REDHAWK release artifacts.
 
 
 Quickstart
 ----------
-The only requirement for redhawk-compose is a yum repository containing a REDHAWK release.
-For convenience, we have provided a container to host the REDHAWK rpms locally.  To
-start the local yum server and launch our stock REDHAWK architecture:
-
 ```bash
 # Local yum server is hosted on port 8080 by default - Ensure firewall allows http on 8080
 sudo firewall-cmd --add-port=8080/tcp
