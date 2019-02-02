@@ -1,0 +1,16 @@
+version: '3'
+services:
+  
+  repo:
+    build:
+      context: .
+      args:
+        - REDHAWK_TAR=${REDHAWK_TAR:-https://github.com/RedhawkSDR/redhawk/releases/download/2.2.1/redhawk-yum-2.2.1-el7-x86_64.tar.gz}
+    image: redhawk-compose:repo
+    ports:
+      - "${YUM_PORT:-8080}:80"
+    networks:
+      - redhawk-yum
+
+networks:
+  redhawk-yum:
